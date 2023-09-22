@@ -27,7 +27,7 @@
         "url": "https://github.com/Xuanny-qx/FIT3179/blob/main/Visualisation2/data/location_coordinates.csv"
       },
       "projection": {
-        "type": "mercator" //identity
+        "type": "mercator"
       },
       "mark": "circle",
       "encoding": {
