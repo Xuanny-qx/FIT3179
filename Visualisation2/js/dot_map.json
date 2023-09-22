@@ -2,6 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 500,
   "height": 300,
+  "title": "Global shark attacks over the years",
+
   "layer": [
     {
       "data": {
