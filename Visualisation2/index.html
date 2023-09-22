@@ -8,18 +8,18 @@
   
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
-
 </head>
 <body>
   
 <div id="dot_map"></div>
 
 <script type="text/javascript">
-
   var spec = {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 800, // Adjust the width and height as needed
     "height": 500,
+    "title": "Global shark attacks over the years",
+    
     "layer": [
       {
         "data": {
@@ -34,9 +34,16 @@
         },
         "mark": {
           "type": "geoshape",
-          "fill": "lightgray",
+          "fill": "#99d8c9",
           "stroke": "white"
         }
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+          "format": {"type": "topojson", "feature": "oceans"}
+        },
+        "mark": {"type": "geoshape", "fill": "skyblue"}
       },
       {
         "data": {
@@ -58,7 +65,14 @@
           "size": {"value": 10}, // Adjust the size of the dots
           "color": {"value": "red"} // Change the color of the dots
         }
-      }
+      },
+      {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Xuanny-qx/FIT3179/main/Visualisation2/js/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+      },
+      "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+    }
     ]
   };
 
